@@ -9,8 +9,9 @@ import java.util.*
  */
 class Recycler(typeNumber: Int) {
 
-    // 二维数组，一维是type
-    private var views: Array<Stack<View>?> = arrayOfNulls(typeNumber)
+    // Stack数组
+//    private var views: Array<Stack<View>?> = arrayOfNulls(typeNumber)
+    private var views: HashMap<Int,Stack<View>?> = hashMapOf()
 
     init {
         for (i in 0 until typeNumber) {

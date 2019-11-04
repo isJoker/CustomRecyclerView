@@ -234,7 +234,7 @@ class RecyclerView(context: Context?, attrs: AttributeSet?) : ViewGroup(context,
         val view: View?
         if (recycleView == null) {
             view = adapter?.onCreateViewHolder(row, recycleView, this)
-            recycleView?.let { adapter?.onBinderViewHolder(row, it, this) }
+            view?.let { adapter?.onBinderViewHolder(row, it, this) }
             if (view == null) {
                 throw RuntimeException("onCreateViewHolder  必须填充布局")
             }
